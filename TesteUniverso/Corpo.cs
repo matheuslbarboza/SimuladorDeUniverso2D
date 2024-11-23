@@ -20,6 +20,24 @@ namespace SimuladorDeUniverso2D
         private double forcaX; // Força atuando no eixo X (em N)
         private double forcaY; // Força atuando no eixo Y (em N)
 
+        // Sobrecarga do operador +
+        public static Corpo operator +(Corpo c1, Corpo c2)
+        {
+            double massaTotal = c1.massa + c2.massa;
+            double px = (c1.massa * c1.velX) + (c2.massa * c2.velX);
+            double py = (c1.massa * c1.velY) + (c2.massa * c2.velY);
+            double densidadeResultante = (c1.massa * c1.densidade + c2.massa * c2.densidade) / massaTotal;
+
+            return new Corpo(
+                c1.nome + c2.nome,
+                massaTotal,
+                (c1.posX + c2.posX) / 2,
+                (c1.posY + c2.posY) / 2,
+                px / massaTotal,
+                py / massaTotal,
+                densidadeResultante
+            );
+        }
 
         // Construtor padrão
         public Corpo()
@@ -37,56 +55,58 @@ namespace SimuladorDeUniverso2D
         }
 
         // Construtor sobrecarregado
-        public Corpo(string nome, double massa, double posX, double posY,
-                     double velX, double velY, double densidade)
+        public Corpo(string n, double m, double pX, double pY,
+                     double vX, double vY, double d)
         {
             this.eValido = true;
-            this.nome = nome;
-            this.massa = massa;
-            this.posX = posX;
-            this.posY = posY;
-            this.velX = velX;
-            this.velY = velY;
+            this.nome = n;
+            this.massa = m;
+            this.posX = pX;
+            this.posY = pY;
+            this.velX = vX;
+            this.velY = vY;
             this.forcaX = 0;
             this.forcaY = 0;
-            this.densidade = densidade;
+            this.densidade = d;
         }
 
         // Métodos get e set
-        public bool GetValido() => eValido; // Retorna se o corpo é válido
-        public void SetValido(bool valor) => eValido = valor; // Define se o corpo é válido
+        public bool GetValido() { return this.eValido; } // Retorna se o corpo é válido
+        public void SetValido(bool v) { this.eValido = v; } // Define se o corpo é válido
 
-        public string GetNome() => nome; // Retorna o nome do corpo
-        public void SetNome(string valor) => nome = valor; // Define o nome do corpo
+        public String GetNome() { return this.nome; } // Retorna o nome do corpo
+        public void SetNome(string nome) { this.nome = nome; } // Define o nome do corpo
 
-        public double GetMassa() => massa; // Retorna a massa do corpo
-        public void SetMassa(double valor) => massa = valor; // Define a massa do corpo
+        public double GetMassa() { return this.massa; } // Retorna a massa do corpo
+        public void SetMassa(double m) { this.massa = m; } // Define a massa do corpo
 
-        public double GetDensidade() => densidade; // Retorna a densidade do corpo
-        public void SetDensidade(double valor) => densidade = valor; // Define a densidade do corpo
+        public double GetDensidade() { return this.densidade; } // Retorna a densidade do corpo
+        public void SetDensidade(double dens) { this.densidade = dens; } // Define a densidade do corpo
 
-        public double GetPosX() => posX; // Retorna a posição X do corpo
-        public void SetPosX(double valor) => posX = valor; // Define a posição X do corpo
+        public double GetPosX() { return this.posX; } // Retorna a posição X do corpo
+        public void SetPosX(double x) { this.posX = x; } // Define a posição X do corpo
 
-        public double GetPosY() => posY; // Retorna a posição Y do corpo
-        public void SetPosY(double valor) => posY = valor; // Define a posição Y do corpo
+        public double GetPosY() { return this.posY; } // Retorna a posição Y do corpo
+        public void SetPosY(double y) { this.posY = y; } // Define a posição Y do corpo
 
-        public double GetVelX() => velX; // Retorna a velocidade em X
-        public void SetVelX(double valor) => velX = valor; // Define a velocidade em X
+        public double GetVelX() { return this.velX; } // Retorna a velocidade em X
+        public void SetVelX(double x) { this.velX = x; } // Define a velocidade em X
 
-        public double GetVelY() => velY; // Retorna a velocidade em Y
-        public void SetVelY(double valor) => velY = valor; // Define a velocidade em Y
+        public double GetVelY() { return this.velY; } // Retorna a velocidade em Y
+        public void SetVelY(double y) { this.velY = y; } // Define a velocidade em Y
 
-        public double GetForcaX() => forcaX; // Retorna a força no eixo X
-        public void SetForcaX(double valor) => forcaX = valor; // Define a força no eixo X
+        public double GetForcaX() { return this.forcaX; } // Retorna a força no eixo X
+        public void SetForcaX(double forca) { this.forcaX = forca; } // Define a força no eixo X
 
-        public double GetForcaY() => forcaY; // Retorna a força no eixo Y
-        public void SetForcaY(double valor) => forcaY = valor; // Define a força no eixo Y
+        public double GetForcaY() { return this.forcaY; } // Retorna a força no eixo Y
+        public void SetForcaY(double forca) { this.forcaY = forca; } // Define a força no eixo Y
+
 
         // Método que calcula e retorna o raio com base na densidade e massa
         public double GetRaio()
         {
-            double raio = Math.Pow((3 * Math.PI * this.massa) / (4 * this.densidade), 1.0 / 3);
+            double raio = Math.Pow((3 * Math.PI * this.massa) / (4 * this.densidade), ((double)1 / 3));
+
             return raio / 5; // Retorna o raio ajustado conforme a lógica fornecida
         }
 
@@ -99,10 +119,6 @@ namespace SimuladorDeUniverso2D
             this.posY = outro.GetPosY();
             this.velX = outro.GetVelX();
             this.velY = outro.GetVelY();
-            this.forcaX = outro.GetForcaX();
-            this.forcaY = outro.GetForcaY();
-            this.densidade = outro.GetDensidade();
-            this.eValido = outro.GetValido();
         }
     }
 }
