@@ -1,0 +1,16 @@
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\bin\Debug\net8.0-windows\SimuladorDeUniverso2D.exe
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\bin\Debug\net8.0-windows\SimuladorDeUniverso2D.deps.json
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\bin\Debug\net8.0-windows\SimuladorDeUniverso2D.runtimeconfig.json
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\bin\Debug\net8.0-windows\SimuladorDeUniverso2D.dll
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\bin\Debug\net8.0-windows\SimuladorDeUniverso2D.pdb
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\obj\Debug\net8.0-windows\SimuladorDeUniverso2D.Form1.resources
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\obj\Debug\net8.0-windows\SimuladorDeUniverso2D.csproj.GenerateResource.cache
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\obj\Debug\net8.0-windows\SimuladorDeUniverso2D.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\obj\Debug\net8.0-windows\SimuladorDeUniverso2D.AssemblyInfoInputs.cache
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\obj\Debug\net8.0-windows\SimuladorDeUniverso2D.AssemblyInfo.cs
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\obj\Debug\net8.0-windows\SimuladorDeUniverso2D.csproj.CoreCompileInputs.cache
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\obj\Debug\net8.0-windows\SimuladorDeUniverso2D.dll
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\obj\Debug\net8.0-windows\refint\SimuladorDeUniverso2D.dll
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\obj\Debug\net8.0-windows\SimuladorDeUniverso2D.pdb
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\obj\Debug\net8.0-windows\SimuladorDeUniverso2D.genruntimeconfig.cache
+C:\Users\Matheus\source\repos\SimuladorDeUniverso2D\SimuladorDeUniverso2D\obj\Debug\net8.0-windows\ref\SimuladorDeUniverso2D.dll
